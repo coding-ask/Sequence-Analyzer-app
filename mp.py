@@ -103,14 +103,12 @@ if analyze and sequence:
     st.write("Basic %:", round(basic, 3))
 
     fig2, ax2 = plt.subplots()
-    c = ['red', 'green']
-    ax2.bar(["Acidic", "Basic"], [acidic, basic])
-    plt.xlabel('X-axis',size=12) 
-    plt.ylabel('Y-axis',size=12)  
-    plt.bar(x=x, height=y, color = c)
+    ax2.bar(["Acidic", "Basic"], [acidic, basic], color=['red', 'blue'])
+    plt.xlabel('X-axis', size=12) 
+    plt.ylabel('Y-axis', size=12)  
     ax2.set_title("Acidic vs Basic Content")
     st.pyplot(fig2)
-    
+        
     buf2 = io.BytesIO()
     fig2.savefig(buf2, format="png")
     st.download_button(
