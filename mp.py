@@ -104,6 +104,8 @@ if analyze and sequence:
 
     fig2, ax2 = plt.subplots()
     ax2.bar(["Acidic", "Basic"], [acidic, basic])
+    plt.xlabel('X-axis',size=12) 
+    plt.ylabel('Y-axis',size=12)
     ax2.set_title("Acidic vs Basic Content")
     st.pyplot(fig2)
     
