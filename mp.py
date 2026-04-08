@@ -49,6 +49,8 @@ if analyze and sequence:
     
     st.subheader("Amino Acid Composition Plot")
     fig1, ax1 = plt.subplots()
+    plt.xlabel('X-axis',size=12) 
+    plt.ylabel('Y-axis',size=12)
     ax1.bar(df["Amino Acid"], df["Percentage"])
     st.pyplot(fig1)
     
